@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_connect"
+        android:icon="@drawable/ic_input_black_24dp"
+        android:checked="false"
+        android:title="Connect"/>
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:checked="true"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_controls"
+        android:icon="@drawable/ic_equalizer"
+        android:checked="false"
+        android:title="Controls" />
+
+</menu>

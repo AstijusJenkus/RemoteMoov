@@ -1,0 +1,13 @@
+<resources>
+    <!-- MAIN -->
+    <string name="app_name">RemoteMoov</string>
+
+    <!-- CONNECT BUTTON -->
+    <string name="connect">Connect</string>
+    <string name="connecting">Connecting...</string>
+    <string name="connected">Connected</string>
+
+    <!-- UNDERLINE -->
+    <string name="how"><u>How to connect</u></string>
+
+</resources>
