@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ConnectSavedFragment">
+
+    <!-- View Guidelines -->
+    <!-- This is used to fit certain view elements -->
+    <!-- Correctly on any screen size -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo_saved"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        android:layout_marginTop="25sp"
+        app:srcCompat="@drawable/ic_saved_fragment"
+        android:contentDescription="@string/logo_description" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title_saved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/arial"
+        android:text="@string/title_saved"
+        android:textColor="@color/title"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/description_saved"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title_saved"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/arial"
+        android:text="@string/description_saved"
+        android:textAlignment="center"
+        android:textColor="@color/description"
+        android:textSize="18sp" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/message_saved_conn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/recycler_ip"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_ip"
+        android:layout_marginTop="25sp"
+        android:fontFamily="@font/arial"
+        android:textAlignment="center"
+        android:textColor="@color/description"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:text="@string/message_no_conns" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_ip"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        app:layout_constraintTop_toBottomOf="@id/description_saved"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@id/button_connect"
+        android:layout_marginTop="25sp"/>
+
+    <!-- Connect Button -->
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="10sp"
+        android:padding="15sp"
+        android:clickable="false"
+        android:backgroundTint="@color/gray"
+        android:textColor="@color/white"
+        android:fontFamily="@font/arial"
+        android:textSize="20sp"
+        android:text="@string/button_connect" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

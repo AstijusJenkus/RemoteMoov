@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ControlSliderFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- View Guidelines -->
+            <!-- This is used to fit certain view elements -->
+            <!-- Correctly on any screen size -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/fragment_controls_view" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <!-- FragmentContainerView -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_controls_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/label_control_part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/arial"
+                android:text="@string/no_answer"
+                android:textColor="@color/title"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+            <!-- Minimum -->
+            <TextView
+                android:id="@+id/label_limit_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:text="@string/no_answer"
+                android:textColor="@color/title"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/label_control_part" />
+
+            <!-- Maximum -->
+            <TextView
+                android:id="@+id/label_limit_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:text="@string/no_answer"
+                android:textColor="@color/title"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@id/label_control_part" />
+
+            <!-- Label Limits -->
+            <TextView
+                android:id="@+id/label_limits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:text="@string/label_limits"
+                android:textColor="@color/title"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_limit_min" />
+
+            <!-- Seekbar Limits -->
+            <com.jaygoo.widget.RangeSeekBar
+                android:id="@+id/seekbar_limits"
+                app:rsb_min="0"
+                app:rsb_max="180"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                app:rsb_progress_height="5sp"
+                app:rsb_progress_radius="2sp"
+                app:rsb_progress_drawable="@drawable/seekbar_fill"
+                app:layout_constraintTop_toBottomOf="@id/label_limits"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right" />
+
+            <!-- Output -->
+            <TextView
+                android:id="@+id/label_output_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:text="@string/no_answer"
+                android:textColor="@color/title"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintTop_toBottomOf="@id/seekbar_limits" />
+
+            <!-- Label Output -->
+            <TextView
+                android:id="@+id/label_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:text="@string/label_output"
+                android:textColor="@color/title"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_output_num" />
+
+            <!-- Seekbar Limits -->
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekbar_output"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/label_output"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                android:min="0"
+                android:max="180"
+                android:progressDrawable="@drawable/seekbar"
+                android:thumb="@drawable/seekbar_thumb" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,179 @@
 <resources>
-    <!-- MAIN -->
     <string name="app_name">RemoteMoov</string>
 
-    <!-- CONNECT BUTTON -->
-    <string name="connect">Connect</string>
-    <string name="connecting">Connecting...</string>
-    <string name="connected">Connected</string>
+    <!-- SharedPreferences -->
+    <string name="preference_saved_conns">Saved Connections</string>
 
-    <!-- UNDERLINE -->
-    <string name="how"><u>How to connect</u></string>
+    <!-- Activities and Fragments -->
+    <!-- Titles -->
+    <string name="title_connection">Connection</string>
+    <string name="title_saved">Saved Connections</string>
+    <string name="title_default">Default Controls</string>
+    <string name="title_voice">Voice Recognition</string>
+    <string name="title_kinect">Kinect Tracking</string>
+    <string name="title_control">Slider Controls</string>
+    <!-- Descriptions -->
+    <string name="description_connection">Establish a remote connection with another device via internal IP address. Before connecting check if the target device is running MyRobotLab.</string>
+    <string name="description_saved">No need to enter IP address every time you want to connect. You can access and manage your established connections here.</string>
+    <string name="description_default">For most actions, you can initiate and control InMoov with these controls.</string>
+    <string name="description_voice">Instead of typing you can send commands using voice recognition on your phone. Just press the start button and say a command.</string>
+    <string name="description_kinect">To start tracking press the start button while standing about 2 meters away from Kinect and wait while the camera picks up your skeletal information. If you can\'t see the start button make sure Kinect is properly set up with device running MyRobotLab.</string>
+    <string name="description_control">This section allows you to control individual InMoov parts with sliders.\nTo start select a general area.</string>
+    <!-- Error messages -->
+    <string name="message_no_conns">"You don't have \nany saved connections"</string>
+    <string name="message_kinect">Kinect not found</string>
+    <!-- Bullshit ImageView "descriptions" -->
+    <string name="logo_description">Fragment logo</string>
+    <string name="logo_description_separator">Separator line logo</string>
+    <string name="logo_description_info">Information indicator logo</string>
+    <string name="logo_description_part">Part image</string>
+
+    <!-- TopSheet -->
+    <string name="title_topsheet">Current user information</string>
+    <string name="no_answer">N/A</string>
+    <string name="label_java">Java:</string>
+    <string name="label_myrobotlab">MyRobotLab:</string>
+    <string name="label_user">User:</string>
+    <string name="label_ip">Internal IP:</string>
+
+    <!-- TextField Hints -->
+    <string name="hint_ip">IP</string>
+    <string name="hint_command">Enter a command…</string>
+
+    <!-- Buttons -->
+    <string name="button_connect">Connect</string>
+    <string name="button_rest">Rest</string>
+    <string name="button_kinect">Kinect</string>
+    <string name="button_voice">Voice</string>
+    <string name="button_send">Send</string>
+    <string name="button_start">Start</string>
+    <string name="button_stop">Stop</string>
+    <string name="button_torso">Torso</string>
+    <string name="button_head">Head</string>
+    <string name="button_hands">Hands</string>
+    <string name="button_arms">Arms</string>
+
+    <!-- Menus -->
+    <!-- Saved Connection RecyclerView -->
+    <string name="menu_saved_edit">Edit</string>
+    <string name="menu_saved_delete">Delete</string>
+    <!-- Connect Activity BottomNavigationView -->
+    <string name="menu_conn_new">New</string>
+    <string name="menu_conn_saved">Saved</string>
+    <!-- Main Activity BottomNavigationView -->
+    <string name="menu_main_connect">Connect</string>
+    <string name="menu_main_home">Home</string>
+    <string name="menu_main_controls">Controls</string>
+
+    <!-- InMoov Controls -->
+    <!-- Slider labels -->
+    <string name="label_output">Output</string>
+    <string name="label_limits">Limits</string>
+    <!-- Buttons -->
+    <!-- Arms -->
+    <string name="button_rotate">Rotate</string>
+    <string name="button_bicep">Bicep</string>
+    <string name="button_shoulder">Shoulder</string>
+    <string name="button_omoplate">Omoplate</string>
+    <!-- Hands -->
+    <string name="button_wrist">Wrist</string>
+    <string name="button_pinky">Pinky</string>
+    <string name="button_ring">Ring</string>
+    <string name="button_middle">Middle</string>
+    <string name="button_index">Index</string>
+    <string name="button_thumb">T</string>
+    <!-- Head -->
+    <string name="button_eye">Eye</string>
+    <string name="button_roll">Roll</string>
+    <string name="button_neck">Neck</string>
+    <!-- Torso -->
+    <string name="button_low">Low</string>
+    <string name="button_mid">Mid</string>
+    <string name="button_top">Top</string>
+    <!-- Titles -->
+    <!-- Arms -->
+    <string name="title_right_rotate">Right Arm Rotate</string>
+    <string name="title_right_bicep">Right Arm Bicep</string>
+    <string name="title_right_shoulder">Right Arm Shoulder</string>
+    <string name="title_right_omoplate">Right Arm Omoplate</string>
+    <string name="title_left_rotate">Left Arm Rotate</string>
+    <string name="title_left_bicep">Left Arm Bicep</string>
+    <string name="title_left_shoulder">Left Arm Shoulder</string>
+    <string name="title_left_omoplate">Left Arm Omoplate</string>
+    <!-- Hands -->
+    <string name="title_right_wrist">Right Hand Wrist</string>
+    <string name="title_right_pinky">Right Pinky Finger</string>
+    <string name="title_right_ring">Right Ring Finger</string>
+    <string name="title_right_middle">Right Middle Finger</string>
+    <string name="title_right_index">Right Index Finger</string>
+    <string name="title_right_thumb">Right Thumb</string>
+    <string name="title_left_wrist">Left Hand Wrist</string>
+    <string name="title_left_pinky">Left Pinky Finger</string>
+    <string name="title_left_ring">Left Ring Finger</string>
+    <string name="title_left_middle">Left Middle Finger</string>
+    <string name="title_left_index">Left Index Finger</string>
+    <string name="title_left_thumb">Left Thumb</string>
+    <!-- Head -->
+    <string name="title_eyelids">Eye Lids</string>
+    <string name="title_eye_y">Right Eye</string>
+    <string name="title_jaw">Jaw</string>
+    <string name="title_head_rotate">Rotate Head</string>
+    <string name="title_eye_x">Left Eye</string>
+    <string name="title_neck_roll">Roll Neck</string>
+    <string name="title_neck">Neck</string>
+    <!-- Torso -->
+    <string name="title_torso_top">Top Torso</string>
+    <string name="title_torso_mid">Mid Torso</string>
+    <string name="title_torso_low">Lower Torso</string>
+
+    <!-- MyRobotLab -->
+    <!-- API's -->
+    <string name="api_get_response">chatBot/getResponse/</string>
+    <string name="api_runtime">runtime</string>
+    <string name="api_chatbot">chatBot</string>
+    <string name="move_to">/moveTo/</string>
+    <string name="get_min">/getMin</string>
+    <string name="get_max">/getMax</string>
+    <string name="set_min_max">/setMinMax/</string>
+    <string name="get_current_pos">/getCurrentPos</string>
+    <!-- Part API's -->
+    <!-- Arms -->
+    <string name="right_rotate">i01.rightArm.rotate</string>
+    <string name="right_bicep">i01.rightArm.bicep</string>
+    <string name="right_shoulder">i01.rightArm.shoulder</string>
+    <string name="right_omoplate">i01.rightArm.omoplate</string>
+    <string name="left_rotate">i01.leftArm.rotate</string>
+    <string name="left_bicep">i01.leftArm.bicep</string>
+    <string name="left_shoulder">i01.leftArm.shoulder</string>
+    <string name="left_omoplate">i01.leftArm.omoplate</string>
+    <!-- Hands -->
+    <string name="right_wrist">i01.rightHand.wrist</string>
+    <string name="right_pinky">i01.rightHand.pinky</string>
+    <string name="right_ring">i01.rightHand.ringFinger</string>
+    <string name="right_middle">i01.rightHand.majeure</string>
+    <string name="right_index">i01.rightHand.index</string>
+    <string name="right_thumb">i01.rightHand.thumb</string>
+    <string name="left_wrist">i01.leftHand.wrist</string>
+    <string name="left_pinky">i01.leftHand.pinky</string>
+    <string name="left_ring">i01.leftHand.ringFinger</string>
+    <string name="left_middle">i01.leftHand.majeure</string>
+    <string name="left_index">i01.leftHand.index</string>
+    <string name="left_thumb">i01.leftHand.thumb</string>
+    <!-- Head -->
+    <string name="eyelids">i01.eyelids</string>
+    <string name="eye_y">i01.head.eyeY</string>
+    <string name="jaw">i01.head.jaw</string>
+    <string name="head_rotate">i01.head.rothead</string>
+    <string name="eye_x">i01.head.eyeX</string>
+    <string name="neck_roll">i01.head.rollNeck</string>
+    <string name="neck">i01.head.neck</string>
+    <!-- Torso -->
+    <string name="torso_top">i01.torso.topStom</string>
+    <string name="torso_mid">i01.torso.midStom</string>
+    <string name="torso_low">i01.torso.lowStom</string>
+    <!-- Commands -->
+    <string name="command_tracking">"\"tracking skeleton\""</string>
+    <string name="command_kinect_off">"\"off kinect\""</string>
+    <string name="command_rest">rest</string>
 
 </resources>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.ControlHandsFragment">
+
+    <ImageView
+        android:id="@+id/view_image_hands"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hands"
+        android:contentDescription="@string/logo_description_part" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintTop_toTopOf="@id/view_image_hands"
+        app:layout_constraintBottom_toBottomOf="@id/view_image_hands"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight=".5"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight=".5">
+
+            <!-- Wrists -->
+            <LinearLayout
+                android:id="@+id/layout_wrist"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".2">
+
+                <Button
+                    android:id="@+id/button_wrist_right"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:padding="1sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_wrist" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".95"/>
+
+                <Button
+                    android:id="@+id/button_wrist_left"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_wrist" />
+            </LinearLayout>
+
+            <!-- Pinkies -->
+            <LinearLayout
+                android:id="@+id/layout_pinky"
+                android:layout_weight=".2"
+                android:layout_width="match_parent"
+                android:layout_height="0sp">
+
+                <View
+                    android:layout_weight=".05"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_pinky_right"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="1sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_pinky" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".85"/>
+
+                <Button
+                    android:id="@+id/button_pinky_left"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_pinky" />
+
+                <View
+                    android:layout_weight=".05"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!-- Rings -->
+            <LinearLayout
+                android:id="@+id/layout_ring"
+                android:layout_weight=".2"
+                android:layout_width="match_parent"
+                android:layout_height="0sp">
+
+                <View
+                    android:layout_weight=".1"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_ring_right"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="1sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_ring" />
+
+                <View
+                    android:layout_weight=".75"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_ring_left"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_ring" />
+
+                <View
+                    android:layout_weight=".1"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!-- Middle & Thumbs -->
+            <LinearLayout
+                android:id="@+id/layout_middle"
+                android:layout_weight=".2"
+                android:layout_width="match_parent"
+                android:layout_height="0sp">
+
+                <View
+                    android:layout_weight=".15"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_middle_right"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:padding="1sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_middle" />
+
+                <View
+                    android:layout_weight=".15"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_thumb_right"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".15"
+                    android:text="@string/button_thumb" />
+
+                <Button
+                    android:id="@+id/button_thumb_left"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:padding="1sp"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".15"
+                    android:text="@string/button_thumb" />
+
+                <View
+                    android:layout_weight=".17"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_middle_left"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_middle" />
+
+                <View
+                    android:layout_weight=".15"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!-- Index -->
+            <LinearLayout
+                android:id="@+id/layout_index"
+                android:layout_weight=".2"
+                android:layout_width="match_parent"
+                android:layout_height="0sp">
+
+                <View
+                    android:layout_weight=".2"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_index_right"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="1sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_index" />
+
+                <View
+                    android:layout_weight=".55"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/button_index_left"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".025"
+                    android:text="@string/button_index" />
+
+                <View
+                    android:layout_weight=".2"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".05"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

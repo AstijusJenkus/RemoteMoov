@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="15sp"
+    android:paddingEnd="15sp">
+
+    <EditText
+        android:id="@+id/edit_saved_conn_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15sp"
+        android:ems="10"
+        android:maxLength="20"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"/>
+
+    <EditText
+        android:id="@+id/edit_saved_conn_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit_saved_conn_name"
+        android:layout_marginTop="15sp"
+        android:ems="10"
+        android:maxLength="15"
+        android:digits="0123456789."
+        android:inputType="number"
+        android:hint="IP"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

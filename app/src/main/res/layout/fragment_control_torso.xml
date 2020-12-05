@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ControlTorsoFragment">
+
+    <ImageView
+        android:id="@+id/view_image_torso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/torso"
+        android:contentDescription="@string/logo_description_part" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintTop_toTopOf="@id/view_image_torso"
+        app:layout_constraintBottom_toBottomOf="@id/view_image_torso">
+
+        <View
+            android:layout_weight=".36"
+            android:layout_width="match_parent"
+            android:layout_height="0sp" />
+
+        <!-- Top -->
+        <LinearLayout
+            android:layout_weight=".075"
+            android:layout_width="match_parent"
+            android:layout_height="0sp">
+
+            <View
+                android:layout_weight=".05"
+                android:layout_width="0sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_weight=".275"
+                android:id="@+id/button_top"
+                android:backgroundTint="@color/button_control"
+                android:focusable="true"
+                android:padding="1sp"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/white"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:text="@string/button_top" />
+
+            <View
+                android:layout_weight=".8"
+                android:layout_width="0sp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_weight=".02"
+            android:layout_width="match_parent"
+            android:layout_height="0sp" />
+
+        <!-- Mid -->
+        <LinearLayout
+            android:layout_weight=".075"
+            android:layout_width="match_parent"
+            android:layout_height="0sp">
+
+            <View
+                android:layout_weight=".8"
+                android:layout_width="0sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_weight=".275"
+                android:id="@+id/button_mid"
+                android:backgroundTint="@color/button_control"
+                android:focusable="true"
+                android:padding="1sp"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/white"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:text="@string/button_mid" />
+
+            <View
+                android:layout_weight=".05"
+                android:layout_width="0sp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!-- Low -->
+        <LinearLayout
+            android:layout_weight=".075"
+            android:layout_width="match_parent"
+            android:layout_height="0sp">
+
+            <View
+                android:layout_weight=".75"
+                android:layout_width="0sp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_weight=".275"
+                android:id="@+id/button_low"
+                android:backgroundTint="@color/button_control"
+                android:focusable="true"
+                android:padding="1sp"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/white"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:text="@string/button_low" />
+
+            <View
+                android:layout_weight=".075"
+                android:layout_width="0sp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <View
+            android:layout_weight=".1"
+            android:layout_width="match_parent"
+            android:layout_height="0sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Connect -->
+    <item
+        android:id="@+id/bottom_nav_connect"
+        android:icon="@drawable/ic_baseline_input_24"
+        android:title="@string/menu_main_connect" />
+    <!-- Home -->
+    <item
+        android:checked="true"
+        android:id="@+id/mainDefaultFragment"
+        android:icon="@drawable/ic_home_24"
+        android:title="@string/menu_main_home" />
+    <!-- Controls -->
+    <item
+        android:id="@+id/mainControlFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/menu_main_controls" />
+
+</menu>

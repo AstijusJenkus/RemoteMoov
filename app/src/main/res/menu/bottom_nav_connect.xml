@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- New -->
+    <item
+        android:id="@+id/connectFragment"
+        android:title="@string/menu_conn_new" />
+    <!-- Saved -->
+    <item
+        android:id="@+id/savedFragment"
+        android:title="@string/menu_conn_saved" />
+</menu>

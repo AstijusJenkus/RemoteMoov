@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Edit -->
+    <item
+        android:id="@+id/saved_conn_edit"
+        android:title="@string/menu_saved_edit"
+        app:showAsAction="never" />
+    <!-- Delete -->
+    <item
+        android:id="@+id/saved_conn_delete"
+        android:title="@string/menu_saved_delete"
+        app:showAsAction="never" />
+
+</menu>

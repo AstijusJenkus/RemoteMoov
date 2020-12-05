@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ControlArmsFragment">
+
+    <ImageView
+        android:id="@+id/view_image_arms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/arms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_description_part" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/view_image_arms"
+        app:layout_constraintTop_toTopOf="@id/view_image_arms">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight=".2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight=".5"
+            android:orientation="vertical">
+
+            <!-- Rotate -->
+            <LinearLayout
+                android:id="@+id/layout_rotate"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".15">
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+
+                <Button
+                    android:id="@+id/button_rotate_right"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/white"
+                    android:layout_weight=".1"
+                    android:text="@string/button_rotate" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".025" />
+
+                <Button
+                    android:id="@+id/button_rotate_left"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/button_rotate"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1" />
+            </LinearLayout>
+
+            <!-- Biceps -->
+            <LinearLayout
+                android:id="@+id/layout_bicep"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".15">
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".05" />
+
+                <Button
+                    android:id="@+id/button_bicep_right"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:padding="1sp"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/button_bicep"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".15" />
+
+                <Button
+                    android:id="@+id/button_bicep_left"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="1sp"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/button_bicep"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".05" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".3" />
+
+            <!-- Shoulders -->
+            <LinearLayout
+                android:id="@+id/layout_shoulder"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".15">
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".05" />
+
+                <Button
+                    android:id="@+id/button_shoulder_right"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="1sp"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/button_shoulder"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".096" />
+
+                <Button
+                    android:id="@+id/button_shoulder_left"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:padding="1sp"
+                    android:layout_weight=".1"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/button_shoulder"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".05" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".05" />
+
+            <!-- Omoplate -->
+            <LinearLayout
+                android:id="@+id/layout_omoplate"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_weight=".15">
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".08" />
+
+                <Button
+                    android:id="@+id/button_omoplate_right"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="1sp"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/button_omoplate"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".07" />
+
+                <Button
+                    android:id="@+id/button_omoplate_left"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="1sp"
+                    android:backgroundTint="@color/button_control"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/button_omoplate"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".08" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight=".125" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

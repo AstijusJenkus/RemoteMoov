@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/mainDefaultFragment">
+
+
+    <fragment
+        android:id="@+id/mainDefaultFragment"
+        android:name="lt.viko.eif.ajenkus.remotemoov.fragments.MainDefaultFragment"
+        android:label="fragment_main_default"
+        tools:layout="@layout/fragment_main_default" >
+        <action
+            android:id="@+id/action_mainDefaultFragment_to_mainVoiceFragment"
+            app:destination="@id/mainVoiceFragment" />
+        <action
+            android:id="@+id/action_mainDefaultFragment_to_mainKinectFragment"
+            app:destination="@id/mainKinectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainControlFragment"
+        android:name="lt.viko.eif.ajenkus.remotemoov.fragments.MainControlFragment"
+        android:label="fragment_main_control"
+        tools:layout="@layout/fragment_main_control" >
+        <action
+            android:id="@+id/action_mainControlFragment_to_controlSliderFragment"
+            app:destination="@id/controlSliderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainVoiceFragment"
+        android:name="lt.viko.eif.ajenkus.remotemoov.fragments.MainVoiceFragment"
+        android:label="fragment_main_voice"
+        tools:layout="@layout/fragment_main_voice" />
+
+    <fragment
+        android:id="@+id/mainKinectFragment"
+        android:name="lt.viko.eif.ajenkus.remotemoov.fragments.MainKinectFragment"
+        android:label="fragment_main_kinect"
+        tools:layout="@layout/fragment_main_kinect" />
+
+    <fragment
+        android:id="@+id/controlSliderFragment"
+        android:name="lt.viko.eif.ajenkus.remotemoov.fragments.ControlSliderFragment"
+        android:label="fragment_control_slider"
+        tools:layout="@layout/fragment_control_slider">
+
+        <argument
+            android:name="fragmentView"
+            app:argType="reference"
+            android:defaultValue="@layout/fragment_control_hands"/>
+    </fragment>
+</navigation>
